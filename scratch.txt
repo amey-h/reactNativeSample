@@ -1,0 +1,66 @@
+import { StatusBar } from 'expo-status-bar'
+import React, { Component } from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native'
+import Component1 from './Component1'
+import styles from './MyStyles'
+import Parent from './Parent'
+import CounterComponent from './CounterComponent'
+import LoginComponent from './LoginComponent'
+import MyEmployeeList from './MyEmployeeList'
+import ScrollViewDemo from './ScrollViewDemo'
+import MyImagesDemo from './MyImagesDemo'
+
+class App extends Component {
+  state = {
+    myName: 'Amey',
+    myCountry: 'India'
+  }
+
+  constructor () {
+    super()
+    this.myName2 = 'Aditya'
+  }
+
+  //click function
+  onClickCountry = () => {
+    this.setState({ myCountry: 'Dubai' })
+  }
+
+  render () {
+    function onClick (name) {
+      alert('Welcome ' + name)
+    }
+
+    return (
+      <View style={styles.container1}>
+        <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "#E60000" translucent = {true} />
+        <Text style={styles.text}>Hello One</Text>
+
+        <MyImagesDemo/>
+
+        {/* <ScrollViewDemo/> */}
+
+        {/* <MyEmployeeList/> */}
+
+        {/* <LoginComponent /> */}
+        
+        {/* 
+        <Button
+          title="Welcome"
+          onPress={() => onClick("Amey")} */}
+      
+        {/* <Parent /> */}
+      
+        {/* <Component1 />
+
+        <Text style={styles.text}> Hello {this.state.myName}</Text>
+
+        <Text style={styles.text} onPress={this.onClickCountry}>
+          Country: {this.state.myCountry} 
+        </Text> */}
+      </View>
+    )
+  }
+}
+
+export default App
