@@ -31,5 +31,24 @@ export default StyleSheet.create({
     borderColor: 'cyan',
     borderWidth: 1,
     backgroundColor: '#d2f7f1'
-  }
+  },
+
+  button: {
+    alignItems: "center",
+    backgroundColor: "#E60000",
+    padding: 10,
+    width: 300,
+    height: 40,
+    marginTop: 20,
+
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 15,
+  },
+  itemText: {
+    color: 'black',
+    fontSize: 14,
+    marginTop:10,
+  },
 })
